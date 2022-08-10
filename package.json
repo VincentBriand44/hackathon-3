@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "yarn i && yarn --prefix ./frontend i && yarn --prefix ./backend i",
+    "setup": "yarn && yarn --prefix ./frontend && yarn --prefix ./backend",
     "migrate": "cd backend/ && node migrate.js && cd ..",
     "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"yarn --prefix ./frontend run dev\" \"yarn --prefix ./backend run dev\"",
     "dev-front": "yarn --prefix ./frontend run dev",
