@@ -10,7 +10,10 @@ const App = () => {
     {
       path: "/",
       element: <LayerBasic />,
-      children: [{ path: "/", element: <Home /> }],
+      children: [
+        { path: "/", element: <Home /> },
+        // { path: "/ailleurs", element: <Ailleurs /> },
+      ],
     },
   ]);
   return element;

@@ -17,6 +17,7 @@
   },
   "plugins": ["react", "import"],
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-console": "off",
     "no-restricted-syntax": [
       "error",
@@ -36,6 +37,7 @@
       }
     ]
   },
+
   "settings": {
     "import/resolver": {
       "eslint-import-resolver-custom-alias": {
