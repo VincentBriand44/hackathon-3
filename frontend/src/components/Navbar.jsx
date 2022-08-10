@@ -1,10 +1,13 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import * as Icon from "react-feather";
 import MenuItems from "./MenuItems";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-// import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
 function Navbar() {
+  const [active, setActive] = useState(false);
+  const showMenu = () => {
+    setActive(!active);
+  };
   return (
     <div className=" fixed w-full text-white flex justify-between p-4 items-center">
       <div className="text-2xl font-bold text-center uppercase">
@@ -13,8 +16,12 @@ function Navbar() {
         </h1>
       </div>
       <nav>
-        <div className="">
-          <MenuOutlinedIcon />
+        <div className="absolute right-6 md:hidden top-6 scale-150">
+          <Icon.AlignJustify
+            size={32}
+            onClick={showMenu}
+            className="scale-150 cursor-pointer"
+          />
         </div>
         <ul className="hidden md:flex gap-8 p-6 uppercase bg-white/10">
           <li>
@@ -30,7 +37,7 @@ function Navbar() {
             <Link to="/">Rien a foutre</Link>
           </li>
         </ul>
-        <MenuItems />
+        <MenuItems showMenu={showMenu} active={active} />
       </nav>
     </div>
   );
