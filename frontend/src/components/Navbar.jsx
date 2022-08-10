@@ -23,7 +23,7 @@ function Navbar() {
             className="scale-150 cursor-pointer"
           />
         </div>
-        <ul className="hidden md:flex gap-8 p-6 uppercase bg-white/10">
+        <ul className="hidden md:flex gap-8 p-6 uppercase bg-white/10 rounded-3xl">
           <li>
             <Link to="/">Home</Link>
           </li>
