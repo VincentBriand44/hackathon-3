@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "npm i && npm --prefix ./frontend i && npm --prefix ./backend i",
+    "setup": "yarn i && yarn --prefix ./frontend i && yarn --prefix ./backend i",
     "migrate": "cd backend/ && node migrate.js && cd ..",
-    "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"",
-    "dev-front": "npm --prefix ./frontend run dev",
-    "dev-back": "npm --prefix ./backend run dev",
-    "lint": "npm --prefix ./frontend run lint && npm --prefix ./backend run lint",
-    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix"
+    "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"yarn --prefix ./frontend run dev\" \"yarn --prefix ./backend run dev\"",
+    "dev-front": "yarn --prefix ./frontend run dev",
+    "dev-back": "yarn --prefix ./backend run dev",
+    "lint": "yarn --prefix ./frontend run lint && yarn --prefix ./backend run lint",
+    "fix": "yarn --prefix ./frontend run fix && yarn --prefix ./backend run fix"
   },
   "keywords": [],
   "author": "Wild Code School - Lord Of Pings",
