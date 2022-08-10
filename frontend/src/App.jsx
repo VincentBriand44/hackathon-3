@@ -1,14 +1,19 @@
-import Home from "@pages/Home";
+import { useRoutes } from "react-router-dom";
 
-import "./App.css";
+import Home from "./pages/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
-}
+import "./assets/index.css";
+import LayerBasic from "./layers/LayerBasic";
+
+const App = () => {
+  const element = useRoutes([
+    {
+      path: "/",
+      element: <LayerBasic />,
+      children: [{ path: "/", element: <Home /> }],
+    },
+  ]);
+  return element;
+};
 
 export default App;
