@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 
 import Home from "./pages/Home";
 
-import "./assets/index.css";
+import "./index.css";
 import LayerBasic from "./layers/LayerBasic";
 
 const App = () => {
