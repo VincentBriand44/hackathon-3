@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
+import MyFooter from "../components/Footer";
 
 function LayerBasic() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="container mx-auto">
+        <Outlet />
+      </div>
+      <MyFooter />
     </>
   );
 }
