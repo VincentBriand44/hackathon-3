@@ -1,40 +1,53 @@
 import { Footer } from "react-daisyui";
+import { Facebook, Instagram, Twitter } from "react-feather";
+import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 function MyFooter() {
   return (
-    <Footer className="flex justify-between p-1 bg-neutral text-neutral-content">
+    <Footer className="flex justify-around text-xl bg-neutral text-neutral-content">
       <div className="m-8">
         <Footer.Title>Services</Footer.Title>
         <a href="#null" className="link link-hover">
-          Branding
+          Mentions Legales
         </a>
+        <NavHashLink to="/home#faq" className="link link-hover">
+          Faq
+        </NavHashLink>
         <a href="#null" className="link link-hover">
-          Design
-        </a>
-        <a href="#null" className="link link-hover">
-          Marketing
+          Production
         </a>
       </div>
 
       <div className="p-8">
-        <Footer.Title>Company</Footer.Title>
+        <Footer.Title>S'informer et acheter</Footer.Title>
         <a href="#null" className=" link link-hover">
-          About us
+          A propos de nous
         </a>
         <a href="#null" className="link link-hover">
-          Contact
+          Formation
         </a>
+        <NavLink to="shop" className="link link-hover">
+          Acheter
+        </NavLink>
       </div>
       <div className="m-8">
-        <Footer.Title>Legal</Footer.Title>
-        <a href="#null" className="link link-hover">
-          Terms of use
+        <Footer.Title>Social</Footer.Title>
+
+        <a href="#null" className="flex gap-2 link link-hover">
+          <Facebook />
+          Facebook
         </a>
-        <a href="#null" className="link link-hover">
-          Privacy policy
+        <a
+          href="https://twitter.com/illumireptilien?lang=fr"
+          className="flex gap-2 link link-hover"
+        >
+          <Twitter />
+          Twitter
         </a>
-        <a href="#null" className="link link-hover">
-          Cookie policy
+        <a href="#null" className="flex gap-2 link link-hover">
+          <Instagram />
+          Instagram
         </a>
       </div>
     </Footer>

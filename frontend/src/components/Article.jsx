@@ -4,7 +4,6 @@ function Article() {
   return (
     <div className="flex my-8">
       <img className="mb-4 rounded-xl" src={reptilien} alt="reptilien" />
-
       <p className="mx-4 text-xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem
         perferendis quos enim commodi eum sapiente laborum suscipit reiciendis,

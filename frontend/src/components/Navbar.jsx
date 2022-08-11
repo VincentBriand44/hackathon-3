@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as Icon from "react-feather";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.mp4";
 import MenuItems from "./MenuItems";
 
 function Navbar() {
@@ -9,11 +10,11 @@ function Navbar() {
     setActive(!active);
   };
   return (
-    <div className="fixed flex items-center justify-between w-full p-4 text-white ">
-      <div className="text-2xl font-bold text-center uppercase">
-        <h1>
-          Le<span className="block text-4xl">logo</span>
-        </h1>
+    <div className="fixed flex items-center justify-between w-full p-4 text-white">
+      <div className="overflow-hidden text-2xl font-bold text-center uppercase rounded-full">
+        <video autoPlay muted loop width="100" height="100">
+          <source src={logo} type="video/mp4" />
+        </video>
       </div>
       <nav>
         <div className="absolute scale-150 right-6 md:hidden top-6">
