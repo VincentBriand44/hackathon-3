@@ -2,9 +2,11 @@ import { useState } from "react";
 import * as Icon from "react-feather";
 import { Link } from "react-router-dom";
 import MenuItems from "./MenuItems";
+import MenuProfile from "./MenuProfile";
 
 function Navbar() {
   const [active, setActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
   };
@@ -23,7 +25,7 @@ function Navbar() {
             className="scale-150 cursor-pointer"
           />
         </div>
-        <ul className="hidden gap-8 p-6 uppercase md:flex bg-white/10 rounded-3xl">
+        <ul className="items-center hidden h-12 gap-6 p-1 pl-8 uppercase md:flex bg-white/10 rounded-3xl">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -36,7 +38,13 @@ function Navbar() {
           <li>
             <Link to="/">Rien a foutre</Link>
           </li>
+          <li
+            className="h-full rounded-full aspect-square bg-slate-800"
+            onClick={() => setIsActive(!isActive)}
+            aria-hidden="true"
+          />
         </ul>
+        <MenuProfile isActive={isActive} />
         <MenuItems showMenu={showMenu} active={active} />
       </nav>
     </div>
