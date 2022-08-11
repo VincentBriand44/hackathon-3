@@ -7,8 +7,8 @@ function Header() {
         <Navbar />
       </div>
       <div>
-        <div className="bg-hero-image w-full h-screen bg-cover bg-center flex items-center px-4">
-          <div className="uppercase text-center text-white font-extrabold">
+        <div className="flex items-center w-full h-screen px-4 bg-center bg-cover bg-hero-image">
+          <div className="font-extrabold text-center text-white uppercase">
             <h1 className="text-6xl">Titre de la mort qui tue</h1>
             <h3>Et encore plus</h3>
           </div>

@@ -14,7 +14,11 @@ const App = () => {
     {
       path: "/",
       element: <LayerHome />,
-      children: [{ path: "/", element: <Home /> }],
+
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "home", element: <Home /> },
+      ],
     },
     {
       path: "/",
