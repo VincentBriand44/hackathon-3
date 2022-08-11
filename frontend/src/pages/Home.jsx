@@ -1,3 +1,4 @@
+import Article from "../components/Article";
 import Faq from "../components/Faq";
 
 function Home() {
@@ -21,10 +22,15 @@ function Home() {
 
   return (
     <div>
-      {collapses.map((collapse) => (
-        <Faq collapse={collapse} key={collapse.index} />
-      ))}
+      <Article />
+
+      <div className="my-8">
+        {collapses.map((collapse) => (
+          <Faq collapse={collapse} key={collapse.index} />
+        ))}
+      </div>
     </div>
   );
 }
+
 export default Home;
