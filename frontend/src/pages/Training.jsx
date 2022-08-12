@@ -20,8 +20,8 @@ function Training() {
   if (valid) {
     return (
       <>
-        <h1 className="mb-4 text-3xl font-bold text-center">
-          Formation de Combat
+        <h1 className="mt-8 text-xl font-bold text-center">
+          Attention à ne pas les croiser.
         </h1>
 
         <TrainingCarousel />

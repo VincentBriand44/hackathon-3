@@ -27,18 +27,18 @@ function Navbar() {
             className="scale-150 cursor-pointer"
           />
         </div>
-        <ul className="items-center hidden h-12 gap-6 p-1 pl-8 uppercase md:flex bg-white/10 rounded-3xl">
+        <ul className="hidden gap-8 p-6 uppercase md:flex bg-slate-800/60 rounded-3xl backdrop-blur-sm">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Informations</Link>
+            <Link to="shop">Shop</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="pendu">L'epreuve</Link>
           </li>
           <li>
-            <Link to="/">Rien a foutre</Link>
+            <Link to="training">Brrrrrrr!</Link>
           </li>
           <li
             className="flex items-center justify-center h-full rounded-full aspect-square bg-slate-800 hover:bg-slate-900"

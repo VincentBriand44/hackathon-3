@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function MyFooter() {
   return (
-    <Footer className="flex justify-around text-xl bg-neutral text-neutral-content">
+    <Footer className="flex flex-col justify-around text-xl md:flex-row bg-neutral text-neutral-content">
       <div className="m-8">
         <Footer.Title>Services</Footer.Title>
         <a href="#null" className="link link-hover">
@@ -20,9 +20,9 @@ function MyFooter() {
 
       <div className="p-8">
         <Footer.Title>S'informer et acheter</Footer.Title>
-        <a href="#null" className=" link link-hover">
+        <NavLink to="secretPage" className=" link link-hover">
           A propos de nous
-        </a>
+        </NavLink>
         <a href="#null" className="link link-hover">
           Formation
         </a>
