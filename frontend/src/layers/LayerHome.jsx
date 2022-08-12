@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
-function LayerBasic() {
+function LayerHome() {
   return (
     <>
-      <Navbar />
-      <div className="container pt-32 pb-10 mx-auto">
+      <Header />
+      <div className="container mx-auto">
         <Outlet />
       </div>
       <Footer />
@@ -14,4 +14,4 @@ function LayerBasic() {
   );
 }
 
-export default LayerBasic;
+export default LayerHome;

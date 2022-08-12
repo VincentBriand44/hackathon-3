@@ -8,7 +8,7 @@ function Biologie() {
           Des croyances à l'ignorance
           <span className="py-4 text-black">Les informations</span>
         </h1>
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 grid-rows-1 ">
           <div className=" lg:px-8 py-4 xl:px-10">
             Actuellement plus que jamais, l’une des questions est de savoir
             quelles sont les compétences réelles de ceux qui prétendent décider
@@ -19,8 +19,8 @@ function Biologie() {
             faut satisfaire notre cerveau reptilien... coincidence... nous ne le
             pensont pas !
           </div>
-          <div className="flex justify-center items-center px-4 py-2">
-            <div className="bg-tc-gif w-1/2 h-full bg-cover bg-center flex items-center rounded-3xl px-4"></div>
+          <div className="flex justify-center items-center md: px-4 py-2">
+            <div className="bg-tc-gif w-full h-64 bg-cover bg-center flex items-center rounded-3xl "></div>
           </div>
         </div>
       </div>

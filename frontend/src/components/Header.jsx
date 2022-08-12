@@ -6,20 +6,16 @@ function Header() {
       <div>
         <Navbar />
       </div>
+
       <div className="static">
-        <div className=" absolute top-96 left-16 uppercase text-center text-white font-extrabold ">
-          <h1 className="text-6xl">Titre de la mort qui tue</h1>
-          <h3>Et encore plus</h3>
+        <div className=" absolute top-96 left-16 uppercase text-center text-white font-extrabold mr-8">
+          <h1 className="text-4xl mb-8 md:text-6xl">
+            sacrificial reptilian corporation
+          </h1>
+          <h3>want to know more !</h3>
         </div>
       </div>
-      <div className="bg-hero-gif w-full h-screen bg-cover bg-center flex items-center px-4">
-        {/* <div>
-          <div className="uppercase text-center text-white font-extrabold">
-            <h1 className="text-6xl">Titre de la mort qui tue</h1>
-            <h3>Et encore plus</h3>
-          </div>
-        </div> */}
-      </div>
+      <div className="bg-hero-gif w-full h-screen bg-cover bg-center  px-4 md:w-full" />
     </div>
   );
 }

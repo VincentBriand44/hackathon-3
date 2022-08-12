@@ -62,7 +62,7 @@ function Pendu() {
       {console.warn("selectedWord: ", selectedWord)}
       {console.warn("correctLetters: ", selectedWord)}
 
-      <div className="relative p-8 m-4 h-full flex flex-col items-center">
+      <div className="relative p-8 m-4 h-auto flex flex-col items-center">
         <Figure wrongLetters={wrongLetters} />
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
