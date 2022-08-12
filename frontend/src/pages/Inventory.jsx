@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import InventoryContext from "../context/InventoryContext";
 
 function Inventory() {
@@ -6,16 +7,21 @@ function Inventory() {
 
   console.warn({ inventory });
   return (
-    <div className="grid justify-center grid-cols-3">
-      {inventory.map((item) => (
-        <div
-          key={item.id}
-          className="p-8 m-4 text-center bg-slate-800 rounded-xl hover:bg-slate-900"
-        >
-          {item.title}
-        </div>
-      ))}
-    </div>
+    <>
+      <h1 className="mb-4 text-2xl font-bold text-center">Inventaire</h1>
+      <div className="grid justify-center grid-cols-3">
+        {inventory.map((item) => (
+          <NavLink>
+            <div
+              key={item.id}
+              className="p-8 m-4 text-center bg-slate-800 rounded-xl hover:bg-slate-900"
+            >
+              {item.title}
+            </div>
+          </NavLink>
+        ))}
+      </div>
+    </>
   );
 }
 
