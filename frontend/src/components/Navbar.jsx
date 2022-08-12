@@ -13,7 +13,7 @@ function Navbar() {
     setActive(!active);
   };
   return (
-    <div className="fixed flex items-center justify-between w-full p-4 text-white">
+    <div className="fixed flex items-center justify-between w-full p-4 text-white z-10">
       <div className="overflow-hidden text-2xl font-bold text-center uppercase rounded-full">
         <video autoPlay muted loop width="100" height="100">
           <source src={logo} type="video/mp4" />
@@ -27,6 +27,7 @@ function Navbar() {
             className="scale-150 cursor-pointer"
           />
         </div>
+
         <ul className="items-center hidden h-12 gap-8 p-1 pl-8 uppercase md:flex bg-slate-800/60 rounded-3xl backdrop-blur-sm">
           <li>
             <Link to="/">Home</Link>

@@ -1,18 +1,20 @@
 import { Footer } from "react-daisyui";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 function MyFooter() {
   return (
     <Footer className="flex flex-col justify-around text-xl md:flex-row bg-neutral text-neutral-content">
       <div className="m-8">
         <Footer.Title>Services</Footer.Title>
+
         <a href="#null" className="link link-hover">
           Mentions Legales
         </a>
-        {/* <NavHashLink to="/home#faq" className="link link-hover">
+        <NavHashLink to="/home#faq" className="link link-hover">
           Faq
-        </NavHashLink> */}
+        </NavHashLink>
         <a href="#null" className="link link-hover">
           Production
         </a>

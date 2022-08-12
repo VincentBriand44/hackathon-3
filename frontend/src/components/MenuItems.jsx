@@ -16,13 +16,13 @@ function MenuItems({ showMenu, active }) {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/">Informations</Link>
+          <Link to="shop">Shop</Link>
         </li>
         <li>
-          <Link to="/">About</Link>
+          <Link to="pendu">L'epreuve</Link>
         </li>
         <li>
-          <Link to="/">Rien a foutre</Link>
+          <Link to="training">Brrrrrrr!</Link>
         </li>
       </ul>
     </div>

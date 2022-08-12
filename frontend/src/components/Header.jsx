@@ -6,14 +6,16 @@ function Header() {
       <div>
         <Navbar />
       </div>
-      <div>
-        <div className="flex items-center w-full h-screen px-4 bg-center bg-cover bg-hero-image">
-          <div className="font-extrabold text-center text-white uppercase">
-            <h1 className="text-6xl">Les chasseurs de reptiliens</h1>
-            <h3>Et encore plus</h3>
-          </div>
+
+      <div className="static">
+        <div className=" absolute top-96 left-16 uppercase text-center text-white font-extrabold mr-8">
+          <h1 className="text-4xl mb-8 md:text-6xl">
+            sacrificial reptilian corporation
+          </h1>
+          <h3>want to know more !</h3>
         </div>
       </div>
+      <div className="bg-hero-gif w-full h-screen bg-cover bg-center  px-4 md:w-full" />
     </div>
   );
 }

@@ -3,11 +3,11 @@ import { Carousel } from "react-daisyui";
 function TrainingCarousel() {
   return (
     <Carousel
-      className="mt-16 h-80 rounded-box bg-slate-700"
+      className="mt-16 h-80 rounded-box bg-slate-700 "
       display="sequential"
     >
       <Carousel.Item
-        src="https://i.pinimg.com/736x/0e/32/ca/0e32cad3cd1b8db02ee5c1ba5c64d4e4.jpg"
+        src="https://images.pexels.com/photos/11801569/pexels-photo-11801569.jpeg"
         alt="reptil"
       />
       <Carousel.Item
@@ -27,7 +27,7 @@ function TrainingCarousel() {
         alt="reptil"
       />
       <Carousel.Item
-        src="https://www.netcost-security.fr/wp-content/uploads/2022/01/Alien-cetait-la-fin-alternative-du-film-original-qui.jpg"
+        src="https://images.pexels.com/photos/7180827/pexels-photo-7180827.jpeg"
         alt="alien"
       />
       <Carousel.Item
