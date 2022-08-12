@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Cellules",
+      "description": "The original cellule",
+      "image": "https://www.docteurclic.com/galerie-photos/image_3401_400.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Tissus",
+      "description": "The original tissus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Hist.Technik_%282%29.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Organe",
+      "description": "The original organe",
+      "image": "https://st.depositphotos.com/1990041/1897/i/600/depositphotos_18976689-stock-photo-human-body.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Système",
+      "description": "The original système",
+      "image": "https://katalysis.ca/wp-content/uploads/2019/02/systemes.jpg"
+    }
+  ]
+}

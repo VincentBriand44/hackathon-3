@@ -1,9 +1,11 @@
 import { useRoutes } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Pendu from "./components/pendu/Pendu";
 
 import "./index.css";
 import LayerBasic from "./layers/LayerBasic";
+import Section from "./components/Section";
 
 const App = () => {
   const element = useRoutes([
@@ -12,7 +14,8 @@ const App = () => {
       element: <LayerBasic />,
       children: [
         { path: "/", element: <Home /> },
-        // { path: "/ailleurs", element: <Ailleurs /> },
+        { path: "/pendu", element: <Pendu /> },
+        { path: "/section", element: <Section /> },
       ],
     },
   ]);

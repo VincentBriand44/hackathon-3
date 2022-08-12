@@ -9,7 +9,7 @@ function Navbar() {
     setActive(!active);
   };
   return (
-    <div className=" fixed w-full text-white flex justify-between p-4 items-center">
+    <div className=" fixed w-full text-white flex justify-around p-4 pr-96 items-center">
       <div className="text-2xl font-bold text-center uppercase">
         <h1>
           Le<span className="block text-4xl">logo</span>
@@ -23,7 +23,7 @@ function Navbar() {
             className="scale-150 cursor-pointer"
           />
         </div>
-        <ul className="hidden md:flex gap-8 p-6 uppercase bg-white/10 rounded-3xl">
+        <ul className="hidden md:flex gap-8 p-6 font-bold uppercase text- bg-white/50 rounded-3xl cursor-pointer">
           <li>
             <Link to="/">Home</Link>
           </li>
