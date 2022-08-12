@@ -3,8 +3,11 @@ let db;
 
 request.onupgradeneeded = () => {
   db = request.result;
-  const store = db.createObjectStore("cart", { keyPath: "id" });
-  db.createObjectStore("inventory", { keyPath: "id" });
+  const store = db.createObjectStore("cart", {
+    keyPath: "id",
+    autoIncrement: true,
+  });
+  db.createObjectStore("inventory", { keyPath: "id", autoIncrement: true });
 
   const items = [
     {

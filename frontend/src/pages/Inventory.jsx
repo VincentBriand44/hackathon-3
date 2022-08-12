@@ -11,7 +11,7 @@ function Inventory() {
       <h1 className="mb-4 text-2xl font-bold text-center">Inventaire</h1>
       <div className="grid justify-center grid-cols-3">
         {inventory.map((item) => (
-          <NavLink>
+          <NavLink to="">
             <div
               key={item.id}
               className="p-8 m-4 text-center bg-slate-800 rounded-xl hover:bg-slate-900"
