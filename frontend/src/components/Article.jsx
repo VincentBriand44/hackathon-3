@@ -2,8 +2,12 @@ import reptilien from "../assets/reptilien.jpg";
 
 function Article() {
   return (
-    <div className="flex my-8">
-      <img className="mb-4 rounded-xl" src={reptilien} alt="reptilien" />
+    <div className="flex flex-col my-8 lg:flex-row">
+      <img
+        className="object-cover mb-4 rounded-xl"
+        src={reptilien}
+        alt="reptilien"
+      />
       <p className="mx-4 -mt-2 text-lg">
         Pour donner corps à son mouvement, Bobby Henderson reprend
         l’organigramme classique des religions monothéistes, avec un Dieu unique
