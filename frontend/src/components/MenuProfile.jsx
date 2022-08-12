@@ -29,6 +29,7 @@ function MenuProfile({ isActive }) {
       store.add({
         title: item.title,
         price: item.price,
+        link: item.link,
       })
     );
     setInventory(cartData);

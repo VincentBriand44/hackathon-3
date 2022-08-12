@@ -11,6 +11,7 @@ function ShopCard({ card }) {
     storeCart.add({
       title: card.title,
       price: card.price,
+      link: card.link,
     });
     setCartData([...cartData, card]);
   };
