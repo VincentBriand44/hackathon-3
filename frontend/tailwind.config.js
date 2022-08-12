@@ -23,6 +23,7 @@ module.exports = {
       backgroundImage: {
         "hero-image": 'url("./src/assets/6.jpg")',
         "hero-gif": 'url("./src/assets/brain.gif")',
+        "tc-gif": 'url("./src/assets/tc.gif")',
       },
     },
   },
