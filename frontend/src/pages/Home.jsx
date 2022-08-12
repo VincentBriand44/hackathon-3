@@ -28,8 +28,8 @@ function Home() {
       <Article />
 
       <div className="my-8">
-        {collapses.map((collapse) => (
-          <Faq collapse={collapse} key={collapse.index} />
+        {collapses.map((collapse, index) => (
+          <Faq collapse={collapse} key={collapse.index} index={index} />
         ))}
       </div>
     </div>

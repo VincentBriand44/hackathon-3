@@ -1,8 +1,9 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
-import InventoryContext from "../context/InventoryContext";
 import Section from "../components/Section";
 import TrainingCarousel from "../components/TrainingCarousel";
+import InventoryContext from "../context/InventoryContext";
 
 function Training() {
   const { inventory } = useContext(InventoryContext);
@@ -48,7 +49,7 @@ function Training() {
   if (valid) {
     return (
       <>
-        <h1 className=" text-center text-4xl mb-8 md:text-6xl uppercase ">
+        <h1 className="mb-8 text-4xl text-center uppercase md:text-6xl">
           Reconnaitre un reptilien
         </h1>
         <h2 className="mt-8 text-xl font-bold text-center">
@@ -65,7 +66,7 @@ function Training() {
               index % 2 && "md:flex-row-reverse"
             }`}
           >
-            <aside className="w-full md:w-2/3 text-center">
+            <aside className="w-full text-center md:w-2/3">
               <h2 className="mb-4 text-2xl font-bold text-center">
                 {section.title}
               </h2>
@@ -74,7 +75,7 @@ function Training() {
             <img
               src={section.image}
               alt={section.title}
-              className="object-cover w-full md:w-1/3 h-56 rounded-xl"
+              className="object-cover w-full h-56 md:w-1/3 rounded-xl"
             />
           </div>
         ))}
@@ -87,6 +88,13 @@ function Training() {
         Formation de Combat
       </h1>
       <p className="mt-8 text-center">Vous n'avez pas accès à cette page.</p>
+      <p className="mt-8 text-center">
+        Nous vous invitons à aller sur notre{" "}
+        <Link className="text-blue-600" to="/shop">
+          Boutique
+        </Link>{" "}
+        pour acheter cette formation.
+      </p>
     </div>
   );
 }

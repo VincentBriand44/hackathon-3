@@ -72,7 +72,9 @@ function MenuProfile({ isActive }) {
       ) : (
         <p className="mx-4">Votre panier est actuellement vide</p>
       )}
-      <NavLink to="/inventory">Accèder à mes produits</NavLink>
+      <NavLink to="/inventory" className="text-blue-700">
+        Accèder à mes produits
+      </NavLink>
     </div>
   );
 }

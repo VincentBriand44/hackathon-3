@@ -1,6 +1,6 @@
 import { Collapse } from "react-daisyui";
 
-function Faq({ collapse }) {
+function Faq({ collapse, index }) {
   return (
     <Collapse
       id="faq"

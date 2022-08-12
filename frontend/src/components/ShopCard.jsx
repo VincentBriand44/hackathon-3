@@ -17,13 +17,16 @@ function ShopCard({ card }) {
   };
 
   return (
-    <Card className="w-1/4" style={{ backgroundImage: `url(${card.image})` }}>
+    <Card
+      className="w-1/4 bg-cover"
+      style={{ backgroundImage: `url(${card.image})` }}
+    >
       <Card.Body className="bg-slate-500/50">
-        <Card.Title tag="h2" className="text-slate-700">
+        <Card.Title tag="h2" className="text-slate-800">
           {card.title}
         </Card.Title>
         <Card.Actions className="justify-end">
-          <Button color="primary" onClick={async () => handleClick(card.index)}>
+          <Button color="primary" onClick={async () => handleClick()}>
             Acheter pour {card.price}€
           </Button>
         </Card.Actions>
