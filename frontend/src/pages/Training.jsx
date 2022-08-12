@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import TrainingCarousel from "../components/TrainingCarousel";
+import InventoryContext from "../context/InventoryContext";
 
 function Training() {
-  const valid = true;
+  const { inventory } = useContext(InventoryContext);
+  let valid = false;
+  inventory.forEach((item) => {
+    if (item.link === "training") {
+      valid = true;
+    }
+  });
 
   const sections = [
     {
@@ -52,7 +60,7 @@ function Training() {
       <h1 className="mb-4 text-3xl font-bold text-center">
         Formation de Combat
       </h1>
-      <p>Vous n'avez pas accès à cette page.</p>
+      <p className="mt-8 text-center">Vous n'avez pas accès à cette page.</p>
     </div>
   );
 }

@@ -1,42 +1,22 @@
 import { openDB } from "idb";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Button } from "react-daisyui";
 import { NavLink } from "react-router-dom";
 
+import CartContext from "../context/CartContext";
 import InventoryContext from "../context/InventoryContext";
 
 function MenuProfile({ isActive }) {
-  const [itemsData, setItemsData] = useState([]);
-
   const { setInventory } = useContext(InventoryContext);
+  const { cartData, setCartData } = useContext(CartContext);
 
-  const price = itemsData.reduce((acc, item) => acc + item.price, 0);
-
-  useEffect(() => {
-    let items = [];
-
-    const loadData = async () => {
-      const db = await openDB("scr", 1);
-      const store = db.transaction("cart").objectStore("cart");
-
-      let cursor = await store.openCursor();
-
-      while (cursor) {
-        items = [...items, cursor.value];
-        // eslint-disable-next-line no-await-in-loop
-        cursor = await cursor.continue();
-      }
-
-      setItemsData(items);
-    };
-    loadData();
-  }, []);
+  const price = cartData.reduce((acc, item) => acc + item.price, 0);
 
   const handleDelete = async (id) => {
     const db = await openDB("scr", 1);
     const store = db.transaction("cart", "readwrite").objectStore("cart");
     await store.delete(id);
-    setItemsData(itemsData.filter((item) => item.id !== id));
+    setCartData(cartData.filter((item) => item.id !== id));
   };
 
   const handleClick = async () => {
@@ -45,16 +25,16 @@ function MenuProfile({ isActive }) {
       .transaction("inventory", "readwrite")
       .objectStore("inventory");
     const storeCart = db.transaction("cart", "readwrite").objectStore("cart");
-    itemsData.map((item, index) =>
+    cartData.map((item) =>
       store.add({
-        id: index,
         title: item.title,
         price: item.price,
+        link: item.link,
       })
     );
-    setInventory(itemsData);
-    itemsData.forEach((item) => storeCart.delete(item.id));
-    setItemsData(() => []);
+    setInventory(cartData);
+    cartData.forEach((item) => storeCart.delete(item.id));
+    setCartData(() => []);
   };
   return (
     <div
@@ -62,10 +42,10 @@ function MenuProfile({ isActive }) {
       className="absolute z-10 flex-col items-center hidden p-4 my-4 select-none rounded-xl right-4 bg-slate-800"
     >
       <h2 className="m-2 font-bold">Mon panier</h2>
-      {itemsData.length > 0 ? (
+      {cartData.length > 0 ? (
         <>
           <ul>
-            {itemsData.map((item, index) => (
+            {cartData.map((item, index) => (
               <li
                 key={item.id}
                 className={`flex items-center justify-between py-1 px-3 rounded-xl ${
