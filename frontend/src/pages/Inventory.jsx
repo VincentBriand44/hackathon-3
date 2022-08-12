@@ -1,35 +1,20 @@
-import { openDB } from "idb";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import InventoryContext from "../context/InventoryContext";
 
 function Inventory() {
-  const [itemsData, setItemsData] = useState([]);
+  const { inventory } = useContext(InventoryContext);
 
-  useEffect(() => {
-    let items = [];
-
-    const loadData = async () => {
-      const db = await openDB("scr", 1);
-      const store = db.transaction("inventory").objectStore("inventory");
-
-      let cursor = await store.openCursor();
-
-      while (cursor) {
-        items = [...items, cursor.value];
-        // eslint-disable-next-line no-await-in-loop
-        cursor = await cursor.continue();
-      }
-
-      setItemsData(items);
-    };
-    loadData();
-  }, []);
+  console.warn({ inventory });
   return (
-    <div>
-      <ul>
-        {itemsData.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
+    <div className="grid justify-center grid-cols-3">
+      {inventory.map((item) => (
+        <div
+          key={item.id}
+          className="p-8 m-4 text-center bg-slate-800 rounded-xl hover:bg-slate-900"
+        >
+          {item.title}
+        </div>
+      ))}
     </div>
   );
 }

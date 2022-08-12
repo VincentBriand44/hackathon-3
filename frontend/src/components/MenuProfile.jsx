@@ -1,10 +1,14 @@
 import { openDB } from "idb";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button } from "react-daisyui";
 import { NavLink } from "react-router-dom";
 
+import InventoryContext from "../context/InventoryContext";
+
 function MenuProfile({ isActive }) {
   const [itemsData, setItemsData] = useState([]);
+
+  const { setInventory } = useContext(InventoryContext);
 
   const price = itemsData.reduce((acc, item) => acc + item.price, 0);
 
@@ -40,6 +44,7 @@ function MenuProfile({ isActive }) {
     const store = db
       .transaction("inventory", "readwrite")
       .objectStore("inventory");
+    const storeCart = db.transaction("cart", "readwrite").objectStore("cart");
     itemsData.map((item, index) =>
       store.add({
         id: index,
@@ -47,8 +52,9 @@ function MenuProfile({ isActive }) {
         price: item.price,
       })
     );
-    await itemsData.map((item) => handleDelete(item.id));
-    setItemsData([]);
+    setInventory(itemsData);
+    itemsData.forEach((item) => storeCart.delete(item.id));
+    setItemsData(() => []);
   };
   return (
     <div

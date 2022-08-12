@@ -1,7 +1,6 @@
 import { Footer } from "react-daisyui";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
 
 function MyFooter() {
   return (
@@ -11,9 +10,9 @@ function MyFooter() {
         <a href="#null" className="link link-hover">
           Mentions Legales
         </a>
-        <NavHashLink to="/home#faq" className="link link-hover">
+        {/* <NavHashLink to="/home#faq" className="link link-hover">
           Faq
-        </NavHashLink>
+        </NavHashLink> */}
         <a href="#null" className="link link-hover">
           Production
         </a>
