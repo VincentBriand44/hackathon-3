@@ -5,7 +5,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 function MyFooter() {
   return (
-    <Footer className="flex flex-col justify-around text-xl md:flex-row bg-neutral text-neutral-content">
+    <Footer className="flex flex-col justify-around md:flex-row bg-neutral text-neutral-content">
       <div className="m-8">
         <Footer.Title>Services</Footer.Title>
 
