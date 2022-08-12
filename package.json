@@ -1,5 +1,5 @@
 {
-  "name": "reptilianCult",
+  "name": "reptilian-cult",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,5 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.0.0"
-  }
+  },
+  "dependencies": {}
 }
