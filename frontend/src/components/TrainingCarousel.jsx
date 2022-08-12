@@ -2,22 +2,45 @@ import { Carousel } from "react-daisyui";
 
 function TrainingCarousel() {
   return (
-    <Carousel className="rounded-box">
+    <Carousel
+      className="mt-16 h-80 rounded-box bg-slate-700"
+      display="sequential"
+    >
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-        alt="Car"
+        src="https://i.pinimg.com/736x/0e/32/ca/0e32cad3cd1b8db02ee5c1ba5c64d4e4.jpg"
+        alt="reptil"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-        alt="Car"
+        src="https://i.pinimg.com/originals/43/11/33/431133cb972b937a4a663b414a7e2b98.jpg"
+        alt="reptil"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-        alt="Car"
+        src="https://www.cinechronicle.com/wp-content/uploads/2021/07/alien.jpg"
+        alt="alien"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-        alt="Car"
+        src="https://images.midilibre.fr/api/v1/images/view/61951c913e45462f9a06d5a5/large/image.jpg?v=1"
+        alt="reptil"
+      />
+      <Carousel.Item
+        src="https://plumasatomicas.com/wp-content/uploads/2022/04/The-black-alien-Instagram-1280x720.jpg"
+        alt="reptil"
+      />
+      <Carousel.Item
+        src="https://www.netcost-security.fr/wp-content/uploads/2022/01/Alien-cetait-la-fin-alternative-du-film-original-qui.jpg"
+        alt="alien"
+      />
+      <Carousel.Item
+        src="https://iletaitunepub.fr/wp/wp-content/uploads/2022/07/Black-Alien-en-roue-libre-il-veut-passer-a-la-vitesse-superieure-en-samputant-un-membre.jpeg"
+        alt="alien"
+      />
+      <Carousel.Item
+        src="https://sfractus-images.cleo.media/unsafe/0x106:2048x1258/2000x0/images/Resident-Alien-4237.jpg"
+        alt="alien"
+      />
+      <Carousel.Item
+        src="http://storage.canalblog.com/41/95/1344545/116433023.jpg"
+        alt="alien"
       />
     </Carousel>
   );

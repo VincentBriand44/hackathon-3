@@ -1,11 +1,14 @@
 import { useState } from "react";
 import * as Icon from "react-feather";
+import { User } from "react-feather";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.mp4";
 import MenuItems from "./MenuItems";
+import MenuProfile from "./MenuProfile";
 
 function Navbar() {
   const [active, setActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
   };
@@ -37,7 +40,15 @@ function Navbar() {
           <li>
             <Link to="training">Brrrrrrr!</Link>
           </li>
+          <li
+            className="flex items-center justify-center h-full rounded-full aspect-square bg-slate-800 hover:bg-slate-900"
+            onClick={() => setIsActive(!isActive)}
+            aria-hidden="true"
+          >
+            <User />
+          </li>
         </ul>
+        <MenuProfile isActive={isActive} />
         <MenuItems showMenu={showMenu} active={active} />
       </nav>
     </div>
