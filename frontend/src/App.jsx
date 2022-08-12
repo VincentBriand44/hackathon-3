@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 
-import SecretPage from "@components/SecretPage";
+import SecretPage from "./components/SecretPage";
 import LayerBasic from "./layers/LayerBasic";
 import LayerHome from "./layers/LayerHome";
 
@@ -27,7 +27,7 @@ const App = () => {
       children: [
         { path: "/shop", element: <Shop /> },
         { path: "/training", element: <Training /> },
-        { path: "secretPage", element: <SecretPage /> },
+        { path: "/SecretPage", element: <SecretPage /> },
       ],
     },
   ]);
