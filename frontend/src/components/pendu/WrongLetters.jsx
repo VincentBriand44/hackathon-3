@@ -10,7 +10,6 @@ function WrongLetters({ wrongLetters }) {
           </p>
         )}
         <p>
-          Vous avez déjà essayé:
           {wrongLetters
             .map((letter) => (
               <span className=" text-3xl text-red-500 mx-2">{letter}</span>
