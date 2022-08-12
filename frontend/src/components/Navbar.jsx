@@ -28,7 +28,7 @@ function Navbar() {
           />
         </div>
 
-        <ul className="hidden gap-8 p-6 uppercase md:flex bg-slate-800/60 rounded-3xl backdrop-blur-sm">
+        <ul className="items-center hidden h-12 gap-8 p-1 pl-8 uppercase md:flex bg-slate-800/60 rounded-3xl backdrop-blur-sm">
           <li>
             <Link to="/">Home</Link>
           </li>

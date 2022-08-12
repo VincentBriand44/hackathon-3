@@ -20,7 +20,7 @@ function Biologie() {
             pensont pas !
           </div>
           <div className="flex justify-center items-center md: px-4 py-2">
-            <div className="bg-tc-gif w-full h-64 bg-cover bg-center flex items-center rounded-3xl "></div>
+            <div className="bg-tc-gif w-full h-64 bg-cover bg-center flex items-center rounded-3xl " />
           </div>
         </div>
       </div>

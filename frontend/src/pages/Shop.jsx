@@ -4,39 +4,31 @@ function Shop() {
   const cards = [
     {
       index: 0,
-      title: "Test",
+      title: "Technique d'auto-défense",
+      link: "training",
       image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "10.00",
+      price: 149.99,
     },
     {
       index: 1,
-      title: "Test",
+      title: "Kit de combat",
+      link: undefined,
       image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "1.50",
+      price: 1999.99,
     },
     {
       index: 2,
-      title: "Test",
+      title: "Kit de seringues",
+      link: undefined,
       image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "34.50",
+      price: 34.5,
     },
     {
       index: 3,
-      title: "Test",
+      title: "Lunette",
+      link: undefined,
       image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "18.00",
-    },
-    {
-      index: 4,
-      title: "Test",
-      image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "8.50",
-    },
-    {
-      index: 5,
-      title: "Test",
-      image: "https://api.lorem.space/image/shoes?w=400&h=225",
-      price: "6.00",
+      price: 59.99,
     },
   ];
 
