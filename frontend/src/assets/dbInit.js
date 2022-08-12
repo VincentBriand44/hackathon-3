@@ -9,32 +9,32 @@ request.onupgradeneeded = () => {
   });
   db.createObjectStore("inventory", { keyPath: "id", autoIncrement: true });
 
-  const items = [
-    {
-      title: "Kit de combat",
-      price: 100,
-      link: "combat-kit",
-    },
-    {
-      title: "Guide du parfait chasseur de reptiles",
-      price: 20,
-      link: "guide-hunter",
-    },
-    {
-      title: "Liste des reptiliens connus",
-      price: 15,
-      link: "list-rep",
-    },
-  ];
+  // const items = [
+  //   {
+  //     title: "Kit de combat",
+  //     price: 100,
+  //     link: "combat-kit",
+  //   },
+  //   {
+  //     title: "Guide du parfait chasseur de reptiles",
+  //     price: 20,
+  //     link: "guide-hunter",
+  //   },
+  //   {
+  //     title: "Liste des reptiliens connus",
+  //     price: 15,
+  //     link: "list-rep",
+  //   },
+  // ];
 
-  items.map((item, index) =>
-    store.add({
-      id: index,
-      title: item.title,
-      price: item.price,
-      link: item.link,
-    })
-  );
+  // items.map((item, index) =>
+  //   store.add({
+  //     id: index,
+  //     title: item.title,
+  //     price: item.price,
+  //     link: item.link,
+  //   })
+  // );
 };
 
 // eslint-disable-next-line no-return-assign
